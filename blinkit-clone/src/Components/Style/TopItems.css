@@ -1,0 +1,21 @@
+#top-items{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+#top-items-images{
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+@media screen and (max-width: 790px) {
+    #top-items{
+        grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    #top-items{
+        grid-template-columns: repeat(4, 1fr);
+    }
+  }

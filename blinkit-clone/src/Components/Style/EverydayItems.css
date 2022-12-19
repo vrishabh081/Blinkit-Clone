@@ -1,0 +1,24 @@
+#every-day-items{
+    margin-bottom: 2vh;
+}
+#every-day-items-head{
+    display: flex;
+    justify-content: space-between;
+}
+#every-day-items-products{
+    display: flex;
+    margin: 5vh 2vw 0 2vw;
+    gap: 12px;
+    overflow: scroll;
+    overflow-x: auto;
+}
+#every-day-items-products::-webkit-scrollbar { 
+    display: none;
+}
+#every-day-items-products>div{
+    border: 1px solid;
+}
+#every-day-items-price-div{
+    display: flex;
+    justify-content: space-between;
+}

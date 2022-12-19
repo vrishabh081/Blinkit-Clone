@@ -1,0 +1,13 @@
+#top-carousel {
+    display: flex;
+    margin: 5vh 2vw 0 2vw;
+    gap: 12px;
+    overflow: scroll;
+    overflow-x: auto;
+}
+#top-carousel::-webkit-scrollbar { 
+    display: none;
+}
+#top-carousel > div > img{
+    width: 17rem;
+}
