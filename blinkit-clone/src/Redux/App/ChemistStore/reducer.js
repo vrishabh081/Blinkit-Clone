@@ -12,13 +12,13 @@ export const reducer = (oldState = initState, action)=>
     // console.log(action)
     switch(type)
     {
-        case types.Request:
+        case types.REQUEST_CHEMIST_STORE:
             return {...oldState, isLoading : true}
         
-        case types.Success:
+        case types.SUCCESS_CHEMIST_STORE:
             return {...oldState, isLoading : false, data : payload}
 
-        case types.Failed:
+        case types.ERROR_CHEMIST_STORE:
             return {...oldState, isLoading : false, isError : true}
 
         default:

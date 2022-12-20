@@ -1,33 +1,39 @@
-import "./Style/EverydayItems.css"
-import { useSelector } from "react-redux";
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { getBiscuitSnacks } from '../Redux/App/BiscuitsSnacksChocklates/action';
+import "./Style/Items.css";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import { CloseButton } from "@chakra-ui/react";
 
-export function BiscuitsSnacksChocolates()
-{
-  const topCarouselData = useSelector(store=>store.AppReducer.data[0]);
-//   console.log(topCarouselData)
+export const BiscuitChock = () => {
+  const biscuitSnacks = useSelector(store=>store.BiscuitsSnacksChocolates);
+  const {data} = biscuitSnacks
+  const dispatch = useDispatch();
 
-  return(
-    <div id="every-day-items">
-        <div id="every-day-items-head">
-            <h1>Biscuits Snacks and Chocklates</h1>
-            <p>See all</p>
-        </div>
-        <div id="every-day-items-products">
-            {topCarouselData !== undefined && topCarouselData.BiscuitsSnacksChocolates.map(el=>
-                <div key={el.id}>
-                <LazyLoadImage src={el.image} alt={el.id} effect="blur" />
-                <p>{el.title}</p>
-                <p>{el.quantity}</p>
-                <div id="every-day-items-price-div">
-                    <p>{el.price}</p>
-                    <button>Add</button>
-                </div>
-                </div>
-            )}
-        </div>
-    </div>
-  );
+  useEffect(()=>{
+    dispatch(getBiscuitSnacks())
+  },[])
+
+
+  return (
+    <div id="items">
+              <div id="items-head">
+                  <h2>Biscuit Snacks & Chocklates</h2>
+                  <p>See all</p>
+              </div>
+              <div id="items-products">
+                  {data.length > 0 && data.map(el=>
+                      <div key={el.id}>
+                      <LazyLoadImage src={el.image} alt={el.id} effect="blur" />
+                      <p id='item-title'>{el.title}</p>
+                      <p>{el.quantity}</p>
+                      <div id="items-price-div">
+                          <p>{el.price}</p>
+                          <button>Add</button>
+                      </div>
+                      </div>
+                  )}
+              </div>
+          </div>
+  )
 }

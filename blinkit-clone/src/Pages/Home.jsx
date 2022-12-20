@@ -1,9 +1,9 @@
-import { BiscuitsSnacksChocolates } from "../Components/BiscuitChock";
+import { BiscuitChock } from "../Components/BiscuitChock";
 import { ChemistStore } from "../Components/ChemistStore";
-import { EveryDayProduct } from "../Components/EveryDayProduct";
+import { EverydayMustHaves } from "../Components/EverydayMustHaves";
+import { HomePageItems } from "../Components/HomePageItems";
 import { PersonalCare } from "../Components/PersonalCare";
 import { TopCarousel } from "../Components/TopCarousel";
-import { TopItems } from "../Components/TopItems";
 
 export function Home()
 {
@@ -11,11 +11,11 @@ export function Home()
     return (
         <div>
             <TopCarousel/>
-            <TopItems/>
+            <HomePageItems/>
+            <EverydayMustHaves/>
+            <BiscuitChock/>
             <PersonalCare/>
-            <EveryDayProduct/>
             <ChemistStore/>
-            <BiscuitsSnacksChocolates/>
         </div>
     );
 }

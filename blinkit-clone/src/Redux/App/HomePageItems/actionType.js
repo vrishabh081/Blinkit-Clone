@@ -1,0 +1,5 @@
+// For Top Items-
+export const REQUEST_TOP_ITEMS = "REQUEST_TOP_ITEMS";
+export const SUCCESS_TOP_ITEMS = "SUCCESS_TOP_ITEMS";
+export const ERROR_TOP_ITEMS = "ERROR_TOP_ITEMS";
+
