@@ -1,0 +1,29 @@
+#four-section{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: auto;
+    width: 95%;
+    gap: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+#four-section>div{
+    margin: 1vh 1vw;
+    font-size: 14px;
+    border: 1px solid rgb(191, 191, 191);
+    padding: 1rem 0;
+    border-radius: 10px;
+}
+#four-section>div>p{
+    padding: 0 2rem;
+}
+#four-section>div>img{
+    width: 70px;
+}
+
+@media screen and (max-width: 810px){
+    #four-section{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0;
+    }
+}

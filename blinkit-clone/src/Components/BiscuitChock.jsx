@@ -4,6 +4,7 @@ import { getBiscuitSnacks } from '../Redux/App/BiscuitsSnacksChocklates/action';
 import "./Style/Items.css";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import { Link } from 'react-router-dom';
 
 export const BiscuitChock = () => {
   const biscuitSnacks = useSelector(store=>store.BiscuitsSnacksChocolates);
@@ -19,7 +20,7 @@ export const BiscuitChock = () => {
     <div id="items">
               <div id="items-head">
                   <h2>Biscuit Snacks & Chocklates</h2>
-                  <p>See all</p>
+                  <Link to="biscuitchock"><p id='see-all'>See all</p></Link>
               </div>
               <div id="items-products">
                   {data.length > 0 && data.map(el=>

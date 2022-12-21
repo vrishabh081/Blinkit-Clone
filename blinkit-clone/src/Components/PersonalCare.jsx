@@ -4,6 +4,7 @@ import "./Style/Items.css";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { getPersonalCare } from '../Redux/App/PersonalCare/action';
+import { Link } from 'react-router-dom';
 
 export const PersonalCare = () => {
   const personalCare = useSelector(store=>store.PersonalCare);
@@ -19,7 +20,7 @@ export const PersonalCare = () => {
     <div id="items">
               <div id="items-head">
                   <h2>Personal Care</h2>
-                  <p>See all</p>
+                  <Link to="/personalcare"><p id='see-all'>See all</p></Link>
               </div>
               <div id="items-products">
                   {data.length > 0 && data.map(el=>

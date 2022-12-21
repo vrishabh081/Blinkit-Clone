@@ -1,0 +1,93 @@
+/* --color__grg7: #d0eac3;
+    --color__grg8: #ecffec; */
+
+#get-app{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ecffec;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 95%;
+    border-radius: 10px;
+}
+#get-app>div{
+    width: 50%;
+    padding: 5vh 5vw;
+}
+#get-app-image{
+    display: flex;
+}
+#mobileLogo{
+    height: 400px;
+    width: 250px;
+}
+#scooterLogo{
+    margin-top: 2rem;
+    margin-left: -110px;
+    width: 270px;
+    height:300px;
+}
+#get-app-heading{
+    margin-top: 3rem;
+}
+#get-app-heading>h1{
+    margin-bottom: -1rem;
+}
+#get-app-check-icons{
+    margin-top: 1rem;
+    font-size: 17px;
+}
+ion-icon{
+    color: green;
+    margin-top: 1rem;
+    margin-bottom: -1px;
+}
+#qrCode{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
+    background-color: #d0eac3;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+#qrCode>div{
+    width: 50%;
+}
+#qrCode>img{
+    width: 90px;
+    height: 90px;
+}
+#small-screen{
+    display: none;
+}
+
+@media screen and (max-width: 810px){
+    #get-app{
+        display: none;
+    }
+    #small-screen{
+        display: block;
+        background-color: #ecffec;
+        margin-bottom: 1rem;
+        width: 92%;
+        border-radius: 10px;
+        margin: auto;
+        margin-top: 2rem;
+        padding: 2vw;
+    }
+    #download-button{
+        display: flex;
+        justify-content: space-between;
+    }
+    #download-button>img{
+        width: 10rem;
+    }
+}
+
+@media screen and (max-width: 480px){
+    #download-button>img{
+        width: 7rem;
+    }
+}
