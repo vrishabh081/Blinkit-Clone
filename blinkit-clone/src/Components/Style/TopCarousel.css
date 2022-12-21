@@ -8,6 +8,12 @@
 #top-carousel::-webkit-scrollbar { 
     display: none;
 }
-#top-carousel > div > img{
-    width: 17rem;
+#top-carousel > div  img{
+    width: 19rem;
+}
+
+@media screen and (max-width : 680px){
+    #top-carousel > div  img{
+        width: 15rem;
+    }
 }
