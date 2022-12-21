@@ -41,7 +41,7 @@ Basic understanding of HTML, CSS and proper understanding of Javascript, React.j
 ### Installation-
 If you wanna clone this website for learning purpose, you can follow some steps, that are-
 
-1. Get a free API Key at [blinkit-database-vercel.vercel.app](blinkit-database-vercel.vercel.app)
+1. Get a free API Key at (https://blinkit-database-vercel.vercel.app/)
 2. Clone the repo
    ```sh
    git clone https://github.com/vrishabh081/Blinkit-Clone.git
